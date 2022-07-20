@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { emojis } from "../../consts/emoji";
 import "./Home.css";
 
 function Home() {
+  useEffect(() => {
+    document.body.style.backgroundColor = "#2ce6ce";
+
+    return () => {
+      document.body.style.backgroundColor = "";
+    };
+  });
   return (
     <div>
       <div className="container">
         <div className="home-header">
-          <div className="header row">
+          <div className="header-row">
             <div className="logo-text">Butterfly</div>
             <div className="login">
               <button className="btn login-btn">Login</button>

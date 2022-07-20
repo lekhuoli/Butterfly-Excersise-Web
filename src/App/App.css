@@ -5,6 +5,10 @@
   --mainBlack: #111;
   --lightBlack: #bbb;
 }
-body {
+/* body {
   background: var(--mainBlue);
+} */
+
+a {
+  text-decoration: none;
 }

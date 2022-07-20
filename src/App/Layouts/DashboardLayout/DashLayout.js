@@ -5,8 +5,14 @@ import "./DashboardLayout.css";
 const DashLayout = ({ children }) => (
   <>
     <DashboardNav />
-    <Sidebar />
-    <main>{children}</main>
+    <main className="main">
+      <div className="responsive-wrapper">
+        <div className="content">
+          <Sidebar />
+          {children}
+        </div>
+      </div>
+    </main>
   </>
 );
 export default DashLayout;
