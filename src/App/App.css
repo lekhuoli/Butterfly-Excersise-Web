@@ -1,0 +1,10 @@
+:root {
+  --mainBlue: #2ce6ce;
+  --mainWhite: #fff;
+  --grayWhite: #eee;
+  --mainBlack: #111;
+  --lightBlack: #bbb;
+}
+body {
+  background: var(--mainBlue);
+}

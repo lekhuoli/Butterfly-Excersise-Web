@@ -3,9 +3,9 @@ import PrivateRoute from "./PrivateRouter";
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import DashLayout from "../Layouts/DashLayout";
-import AuthLayout from "../Layouts/AuthLayout";
-import MainLayout from "../Layouts/MainLayout";
+import DashLayout from "../Layouts/DashboardLayout/DashLayout";
+import AuthLayout from "../Layouts/AuthLayout/AuthLayout";
+import MainLayout from "../Layouts/MainLayout/MainLayout";
 
 import Login from "../../views/auth/Login";
 import Home from "../../views/home";
