@@ -10,6 +10,7 @@ import MainLayout from "../Layouts/MainLayout/MainLayout";
 import Login from "../../views/auth/Login";
 import Home from "../../views/home";
 import Dashboard from "../../views/dashboard";
+import Question from "../../views/home/Question";
 
 const Router = () => (
   <BrowserRouter>
@@ -22,9 +23,10 @@ const Router = () => (
       </Route>
 
       {/* Public routers  */}
-      <Route path={["/"]} exact>
+      <Route path={["/", "/question"]} exact>
         <Layout layout={MainLayout} isPublic={false}>
           <Route path={"/"} exact component={() => <Home />} />
+          <Route path={"/question"} component={() => <Question />} />
         </Layout>
       </Route>
 

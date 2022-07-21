@@ -23,18 +23,22 @@ function Home() {
         <div className="weekly-mood-tracker-box">
           <div className="box-content">
             <div className="row form-group">
-              <label htmlFor="name">Name </label>
+              <label htmlFor="name" className="text-blue">
+                Name{" "}
+              </label>
               <br />
               <input type="text" className="form-control" name="name" />
             </div>
             <div className="moods form-group">
-              <label htmlFor="mood-options" className="mood-label">
+              <label htmlFor="mood-options" className="text-blue">
                 How is your week going?
               </label>
               <Emoji />
             </div>
             <div className="form-group">
-              <label htmlFor="comments">Comments: </label>
+              <label htmlFor="comments" className="text-blue">
+                Comments:{" "}
+              </label>
               <br />
               <textarea className="form-control" name="comment" />
             </div>
