@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { emojis } from "../../consts/emoji";
-import "./Home.css";
 
 function Home() {
   useEffect(() => {
