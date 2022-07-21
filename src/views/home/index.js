@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { emojis } from "../../consts/emoji";
+import Emoji from "../../components/Emoji";
 
 function Home() {
   useEffect(() => {
@@ -31,18 +31,7 @@ function Home() {
               <label htmlFor="mood-options" className="mood-label">
                 How is your week going?
               </label>
-              <div className="mood-options">
-                {emojis.map((emoji) => {
-                  return (
-                    <img
-                      className="options"
-                      src={emoji.imgUrl}
-                      alt="Emoji"
-                      id={emoji.id}
-                    />
-                  );
-                })}
-              </div>
+              <Emoji />
             </div>
             <div className="form-group">
               <label htmlFor="comments">Comments: </label>
