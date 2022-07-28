@@ -388,8 +388,8 @@ img {
 .card-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  column-gap: 1.5rem;
-  row-gap: 1.5rem;
+  // column-gap: 1.5rem;
+  // row-gap: 1.5rem;
   @media (min-width: 600px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -411,7 +411,7 @@ img {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1.5rem 1.25rem 1rem 1.25rem;
+  padding: 1.5rem 1.25rem 0 1.25rem;
   div {
     display: flex;
     align-items: center;
@@ -483,7 +483,7 @@ img {
 }
 
 .card-body {
-  padding: 1rem 1.25rem;
+  padding: 0 1rem 1rem 1.25rem;
   font-size: 0.875rem;
 }
 

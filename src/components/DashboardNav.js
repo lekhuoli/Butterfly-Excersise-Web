@@ -14,12 +14,12 @@ function DashboardNav() {
             {/* <Link to="#"> Home </Link> */}
           </nav>
           <div className="header-navigation-actions">
-            {/* <div className="search">
+            <div className="search">
               <input type="text" placeholder="Search" />
-              <button type="submit">
+              {/* <button type="submit">
                 <i className="ph-magnifying-glass-bold"></i>
-              </button>
-            </div> */}
+              </button> */}
+            </div>
 
             {/* <Link to="#"> Admin </Link> */}
           </div>

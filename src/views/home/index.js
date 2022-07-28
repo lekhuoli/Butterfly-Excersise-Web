@@ -101,7 +101,7 @@ function Home() {
                         }`}
                         src={emoji.imgUrl}
                         alt="Emoji"
-                        id={emoji.id}
+                        key={emoji.id}
                       />
                     );
                   })}

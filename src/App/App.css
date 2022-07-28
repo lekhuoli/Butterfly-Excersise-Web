@@ -180,3 +180,17 @@ textarea {
   display: flex;
   justify-content: space-between;
 }
+.comment-grid {
+  margin: 20px;
+}
+.box-emoji {
+  width: 80px;
+}
+.emoji-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.emoji-text {
+  padding: 10px;
+}

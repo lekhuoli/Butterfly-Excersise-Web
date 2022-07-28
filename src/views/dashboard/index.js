@@ -1,11 +1,28 @@
 import React from "react";
+import CommentItem from "../../components/CommentItem";
 import "../../scss/Dashboard.scss";
-import { Link } from "react-router-dom";
+import { API } from "../../utils/api";
 
 function Dashboard() {
+  const [comments, setComments] = React.useState([]);
+
+  const getCommentItem = async () => {
+    try {
+      const resp = await API.get("/api/comments");
+      const { data } = resp;
+      setComments(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  React.useEffect(() => {
+    getCommentItem();
+  }, []);
+
   return (
     <div className="content-main">
-      <div className="card-grid">
+      {/* <div className="card-grid">
         <article className="card">
           <div className="card-header">
             <div>
@@ -23,44 +40,10 @@ function Dashboard() {
             <Link to="#">View integration</Link>
           </div>
         </article>
-
-        <article className="card">
-          <div className="card-header">
-            <div>
-              <h3>Discord</h3>
-            </div>
-            <label className="toggle">
-              <input type="checkbox" checked />
-              <span></span>
-            </label>
-          </div>
-          <div className="card-body">
-            <p>Keep in touch with your customers without leaving the app.</p>
-          </div>
-          <div className="card-footer">
-            <Link to="#">View integration</Link>
-          </div>
-        </article>
-        <article className="card">
-          <div className="card-header">
-            <div>
-              <h3>Google Drive</h3>
-            </div>
-            <label className="toggle">
-              <input type="checkbox" />
-              <span></span>
-            </label>
-          </div>
-          <div className="card-body">
-            <p>
-              Link your Google account to share files across your entire team.
-            </p>
-          </div>
-          <div className="card-footer">
-            <Link to="#">View integration</Link>
-          </div>
-        </article>
-      </div>
+      </div> */}
+      {comments.map((comment) => {
+        return <CommentItem comment={comment} key={comment.id} />;
+      })}
     </div>
   );
 }
