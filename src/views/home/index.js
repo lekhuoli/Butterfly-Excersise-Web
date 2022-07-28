@@ -16,7 +16,9 @@ function Home() {
           <div className="header-row">
             <div className="logo-text">Butterfly</div>
             <div className="login">
-              <button className="btn login-btn">Login</button>
+              <a href="/dashboard">
+                <button className="btn login-btn">Dashboard</button>
+              </a>
             </div>
           </div>
         </div>
@@ -24,7 +26,7 @@ function Home() {
           <div className="box-content">
             <div className="row form-group">
               <label htmlFor="name" className="text-blue">
-                Name{" "}
+                Name
               </label>
               <br />
               <input type="text" className="form-control" name="name" />
@@ -37,7 +39,7 @@ function Home() {
             </div>
             <div className="form-group">
               <label htmlFor="comments" className="text-blue">
-                Comments:{" "}
+                Comment
               </label>
               <br />
               <textarea className="form-control" name="comment" />

@@ -35,7 +35,7 @@ function Rating() {
             <p>Agree</p>
           </div>
           <div className="form">
-            <label htmlFor="comments">Comments: </label>
+            <label htmlFor="comments">Comment </label>
             <br />
             <textarea className="form-control" name="comment" />
           </div>
