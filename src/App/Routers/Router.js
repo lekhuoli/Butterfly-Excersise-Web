@@ -12,7 +12,7 @@ import Home from "../../views/home";
 import Dashboard from "../../views/dashboard";
 import Question from "../../views/home/Question";
 
-const Router = () => (
+const Router = (props) => (
   <BrowserRouter>
     <Switch>
       {/* Auth Router  */}

@@ -1,6 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { CommentContextApi } from "../context/commentContextApi";
+import { API } from "../utils/api";
 function DashboardNav() {
+  const commentContext = React.useContext(CommentContextApi);
+  const { setComments } = commentContext;
+  const [searchQuery, setSearchQuery] = React.useState("");
+
+  React.useEffect(() => {
+    const handleSearch = async (query) => {
+      try {
+        const result = await API.post(`/api/comments/search/${query}`);
+        const { data } = result;
+        console.log("inside", data);
+        setComments(data);
+      } catch (error) {
+        if (error.response) {
+          alert(error.response.error);
+        }
+        console.log(error);
+      }
+    };
+    handleSearch(searchQuery);
+  }, [searchQuery]);
+
   return (
     <header className="header">
       <div className="header-content responsive-wrapper">
@@ -15,7 +38,11 @@ function DashboardNav() {
           </nav>
           <div className="header-navigation-actions">
             <div className="search">
-              <input type="text" placeholder="Search" />
+              <input
+                type="text"
+                placeholder="Search"
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
               {/* <button type="submit">
                 <i className="ph-magnifying-glass-bold"></i>
               </button> */}

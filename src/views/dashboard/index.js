@@ -1,24 +1,11 @@
 import React from "react";
 import CommentItem from "../../components/CommentItem";
+import { CommentContextApi } from "../../context/commentContextApi";
 import "../../scss/Dashboard.scss";
-import { API } from "../../utils/api";
 
 function Dashboard() {
-  const [comments, setComments] = React.useState([]);
-
-  const getCommentItem = async () => {
-    try {
-      const resp = await API.get("/api/comments");
-      const { data } = resp;
-      setComments(data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  React.useEffect(() => {
-    getCommentItem();
-  }, []);
+  const commentContext = React.useContext(CommentContextApi);
+  const { comments } = commentContext;
 
   return (
     <div className="content-main">
