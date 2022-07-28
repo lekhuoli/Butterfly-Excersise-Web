@@ -96,7 +96,7 @@ textarea {
   align-items: center;
   width: 65px;
   /* height: 80px; */
-  padding: 15px;
+  padding: 12px;
   /* margin: 10px; */
   border-radius: 50%;
   animation-duration: 0.5s;
@@ -107,7 +107,7 @@ textarea {
   /* zoom: 1.2; */
   animation-name: bounce-1;
   animation-timing-function: linear;
-  background: rgb(45, 54, 154);
+  background: #8e96e7;
 }
 
 @keyframes bounce-1 {
@@ -174,4 +174,9 @@ textarea {
 .question-comment {
   display: flex;
   justify-content: center;
+}
+
+.button-section {
+  display: flex;
+  justify-content: space-between;
 }
