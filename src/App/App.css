@@ -33,6 +33,7 @@ label {
 .logo-text {
   color: var(--mainWhite);
   font-size: 24px;
+  margin-bottom: 2rem;
 }
 .login-btn {
   background-color: var(--mainBlue);
